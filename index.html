@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Super important pour mobile -->
   <title>TikToks pour ma copine ❤️</title>
   <style>
     /* Style global */
@@ -14,65 +15,79 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
+      padding: 15px;
     }
 
     /* Titre */
     h1 {
-      font-size: 2.5rem;
-      margin: 20px 0 10px;
+      font-size: 1.8rem;
+      margin: 15px 0 10px;
       background: linear-gradient(90deg, #ff0050, #ff7a00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: center;
-      animation: fadeIn 1.5s ease;
     }
 
     p {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #cbd5e1;
       text-align: center;
-      max-width: 600px;
+      max-width: 90%;
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     /* Container TikToks */
     .tiktok-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
       width: 100%;
-      max-width: 1200px;
+      max-width: 600px; /* Largeur max sur PC, mais fluide sur mobile */
     }
 
     /* Chaque bloc TikTok */
     .tiktok {
       background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      padding: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .tiktok:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
     }
 
-    /* Anim fade-in */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* TikTok responsive */
+    .tiktok-embed {
+      max-width: 100% !important;
+      min-width: auto !important;
+    }
+
+    /* Petit écran */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .tiktok {
+        padding: 8px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>✨ TikToks pour toi ✨</h1>
-  <p>Voici une petite sélection rien que pour toi ❤️<br>Pas besoin de compte TikTok, clique et profite 😘</p>
+  <p>Voici une petite sélection rien que pour toi ❤️<br>Ouvre et profite tranquillement depuis ton téléphone 📱</p>
 
   <div class="tiktok-container">
     <!-- TikTok 1 -->
     <div class="tiktok">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@elisagagnier/video/7529280029625257238" data-video-id="7529280029625257238" style="max-width: 605px; min-width: 325px;">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@elisagagnier/video/7529280029625257238" data-video-id="7529280029625257238" style="max-width: 605px;min-width: 325px;">
         <section>
           <a target="_blank" title="@elisagagnier" href="https://www.tiktok.com/@elisagagnier?refer=embed">@elisagagnier</a>
           <p></p>
@@ -81,9 +96,6 @@
       </blockquote>
     </div>
 
- <div class="tiktok">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@emeee_liinee13/video/7542985672295025942" data-video-id="7542985672295025942" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@emeee_liinee13" href="https://www.tiktok.com/@emeee_liinee13?refer=embed">@emeee_liinee13</a> <p></p> <a target="_blank" title="♬ original sound - Asaf Avidan official" href="https://www.tiktok.com/music/original-sound-7490553918298409729?refer=embed">♬ original sound - Asaf Avidan official</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-    </div>
     <!-- Tu peux rajouter autant de <div class="tiktok">...</div> que tu veux -->
   </div>
 
