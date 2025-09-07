@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TikToks pour ma copine ❤️</title>
+  <style>
+    /* Style global */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Titre */
+    h1 {
+      font-size: 2.5rem;
+      margin: 20px 0 10px;
+      background: linear-gradient(90deg, #ff0050, #ff7a00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: #cbd5e1;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    /* Container TikToks */
+    .tiktok-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    /* Chaque bloc TikTok */
+    .tiktok {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tiktok:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Anim fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ TikToks pour toi ✨</h1>
+  <p>Voici une petite sélection rien que pour toi ❤️<br>Pas besoin de compte TikTok, clique et profite 😘</p>
+
+  <div class="tiktok-container">
+    <!-- TikTok 1 -->
+    <div class="tiktok">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@elisagagnier/video/7529280029625257238" data-video-id="7529280029625257238" style="max-width: 605px; min-width: 325px;">
+        <section>
+          <a target="_blank" title="@elisagagnier" href="https://www.tiktok.com/@elisagagnier?refer=embed">@elisagagnier</a>
+          <p></p>
+          <a target="_blank" title="♬ son original - Cam’" href="https://www.tiktok.com/music/son-original-7496978152231013142?refer=embed">♬ son original - Cam’</a>
+        </section>
+      </blockquote>
+    </div>
+
+ <div class="tiktok">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@emeee_liinee13/video/7542985672295025942" data-video-id="7542985672295025942" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@emeee_liinee13" href="https://www.tiktok.com/@emeee_liinee13?refer=embed">@emeee_liinee13</a> <p></p> <a target="_blank" title="♬ original sound - Asaf Avidan official" href="https://www.tiktok.com/music/original-sound-7490553918298409729?refer=embed">♬ original sound - Asaf Avidan official</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+    </div>
+    <!-- Tu peux rajouter autant de <div class="tiktok">...</div> que tu veux -->
+  </div>
+
+  <script async src="https://www.tiktok.com/embed.js"></script>
+</body>
+</html>
